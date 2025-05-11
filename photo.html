@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftyCharms E-Shop Cart</title>
+
+  <!-- icon kit -->
+  <script src="https://kit.fontawesome.com/f628bc3db3.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="styleee.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light nav-style" style="background-color: #d8b4fe;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand text-white fw-bold" href="index.html">
+        <img src="logo/crafty.jpg" alt="CraftyCharms Logo" width="40" height="40" class="d-inline-block align-text-top rounded-circle">
+        <h4 class="d-inline-block mx-2 mb-0">CraftyCharms E-Shop Cart</h4>
+      </a>
+      <button type="button" class="btn btn-primary position-relative mx-3 my-1" id="cartBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="fas fa-cart-plus" style="font-size: 30px;"></i>
+        <span id="itemCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+          <span class="visually-hidden">items in cart</span>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Product List -->
+  <div class="container my-4" id="productDom">
+    <!-- Products will be dynamically inserted here -->
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="staticBackdropLabel">Your Cart</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Qty</th>
+              </tr>
+            </thead>
+            <tbody id="cart-contant">
+              <!-- Cart items inserted here -->
+            </tbody>
+          </table>
+
+          <div class="text-center my-3">
+            <h4>Total: <span id="total">0</span> Tk</h4>
+            <button class="btn btn-danger mt-2" id="clearCart">Clear Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./scriptt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>All Products - Crafty Charms</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/f628bc3db3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+<!-- Header -->
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      
+      <!-- Logo -->
+      <div class="logo">
+        <img src="logo/crafty.jpg" width="150px" alt="Crafty Charms Logo">
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Products</a>
+            <ul class="dropdown-content">
+              <li><a href="local-products.html">Local Products</a></li>
+              <li><a href="imported-products.html">Imported Products</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact-us">Contact</a></li>
+          <li><a href="#">Account</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Button -->
+      <div class="cart-button">
+        <button type="button" class="btn btn-primary position-relative" id="cartBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="fas fa-cart-plus" style="font-size: 30px;"></i>
+          <span id="itemCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+            <span class="visually-hidden">items in cart</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Search -->
+    <div class="search-container">
+      <input type="checkbox" id="toggle-search">
+      <label for="toggle-search" class="search-label">🔍 Search</label>
+      <div class="search-bar">
+        <form action="#" autocomplete="off">
+          <input type="text" id="searchInput" placeholder="Type to search...">
+          <input type="submit" value="Go">
+          <div id="suggestions" class="autocomplete-suggestions"></div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Products Section -->
+<div class="center-title">
+    <h2>Imported Products</h2>
+</div>
+<button id="sort-btn" class="sort-btn">Sort by Price: Ascending</button> <!-- Button for toggling sort order -->
+
+<div class="container">
+  <div class="row" id="products-container">
+    <!-- Product 1 -->
+    <div class="col-4" data-price="500">
+      <a href="product.html">
+        <img src="product/p10.jpg" alt="Stella Lou Lego Bricks" style="width: 250px;">
+      </a>
+      <h4>Stella Lou Lego Bricks</h4>
+      <div class="rating" id="rating1">
+        <label><input type="radio" name="rating1" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating1" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating1" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating1" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating1" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 280</p>
+      <button class="checkout-btn" data-name="Stella Lou Lego Bricks" data-price="280">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-4" data-price="270">
+      <a href="product.html">
+        <img src="product/p5.jpg" alt="Lavender Pendant" style="width: 250px;">
+      </a>
+      <h4>Stitch Mermaid Eeyore Block</h4>
+      <div class="rating" id="rating2">
+        <label><input type="radio" name="rating2" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating2" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating2" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating2" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating2" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 320</p>
+      <button class="checkout-btn" data-name="Stitch Mermaid Eeyore Block" data-price="320">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-4" data-price="140">
+      <a href="product.html">
+        <img src="product/p6.jpg" alt="Snow White Earring" style="width: 250px;">
+      </a>
+      <h4>Winnie The Pooh Bricks</h4>
+      <div class="rating" id="rating3">
+        <label><input type="radio" name="rating3" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating3" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating3" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating3" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating3" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 300</p>
+      <button class="checkout-btn" data-name="Winnie The Pooh Bricks" data-price="300">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-4" data-price="300">
+      <a href="product.html">
+        <img src="product/p11.jpg" alt="Lavender Pendant" style="width: 250px;">
+      </a>
+      <h4>Donald Duck Brick Lego</h4>
+      <div class="rating" id="rating4">
+        <label><input type="radio" name="rating4" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating4" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating4" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating4" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating4" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 300</p>
+      <button class="checkout-btn" data-name="Donald Duck Brick Lego" data-price="300">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="col-4" data-price="190">
+      <a href="product.html">
+        <img src="product/p9.jpg" alt="Lavender Pendant" style="width: 250px;">
+      </a>
+      <h4>Shellie May Young Pink Bricks</h4>
+      <div class="rating" id="rating5">
+        <label><input type="radio" name="rating5" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating5" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating5" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating5" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating5" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 300</p>
+      <button class="checkout-btn" data-name="Shellie May Young Pink Bricks" data-price="300">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="col-4" data-price="120">
+      <a href="product.html">
+        <img src="product/p4.jpg" alt="Lavender Pendant" style="width: 250px;">
+      </a>
+      <h4>Minnie Mouse Brick Lego</h4>
+      <div class="rating" id="rating6">
+        <label><input type="radio" name="rating6" value="1"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating6" value="2"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating6" value="3"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating6" value="4"><i class="fa fa-star"></i></label>
+        <label><input type="radio" name="rating6" value="5"><i class="fa fa-star"></i></label>
+      </div>
+      <p>Tk. 340</p>
+      <button class="checkout-btn" data-name="Minnie Mouse Brick Lego" data-price="340">
+         <a href="proto.html" class="shop-link">Shop</a>
+      </button>
+    </div>
+  </div>
+</div>
+</html>
+
+
+<script>
+  let isAscending = true; // Initially set to ascending
+
+  // Function to sort products by price
+  function sortProducts() {
+    const container = document.getElementById('products-container');
+    const products = Array.from(container.getElementsByClassName('col-4'));
+
+    // Sort products based on the price
+    products.sort((a, b) => {
+      const priceA = parseInt(a.getAttribute('data-price'));
+      const priceB = parseInt(b.getAttribute('data-price'));
+
+      return isAscending ? priceA - priceB : priceB - priceA; // Toggle between ascending and descending
+    });
+
+    // Append sorted products back to the container
+    products.forEach(product => {
+      container.appendChild(product);
+    });
+
+    // Toggle the button text to indicate the current sorting order
+    const sortBtn = document.getElementById('sort-btn');
+    sortBtn.textContent = `Sort by Price: ${isAscending ? 'Descending' : 'Ascending'}`;
+    
+    // Toggle the sorting order for next click
+    isAscending = !isAscending;
+  }
+
+  // Add event listener to the sort button
+  document.getElementById('sort-btn').addEventListener('click', sortProducts);
+</script>
+
+<script>
+const suggestionsList = [
+  'Light Purple Pendant Earring', 'Lavender Pendant', 'Afterglow M Keychain',
+  'Trinity Stone Ring', 'Stella Lou Lego Bricks', 'Stitch Mermaid Eeyore Block',
+  'Winnie The Pooh Bricks', 'Donald Duck Brick Lego', 'Shellie May Young Pink Bricks',
+  'Minnie Mouse Brick Lego'
+];
+
+const searchInput = document.getElementById('searchInput');
+const suggestionsBox = document.getElementById('suggestions');
+
+searchInput.addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  suggestionsBox.innerHTML = '';
+
+  if (!query) return;
+
+  const filtered = suggestionsList.filter(item => item.toLowerCase().startsWith(query));
+
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = item;
+    div.addEventListener('click', function() {
+      searchInput.value = item;
+      suggestionsBox.innerHTML = '';
+    });
+    suggestionsBox.appendChild(div);
+  });
+});
+document.addEventListener('click', function(event) {
+  // Get the search container and search label elements
+  const searchContainer = document.querySelector('.search-container');
+  const searchLabel = document.querySelector('.search-label');
+  const toggleSearchCheckbox = document.getElementById('toggle-search');
+
+  // If the click is outside the search container and search label, uncheck the checkbox
+  if (!searchContainer.contains(event.target) && event.target !== searchLabel) {
+    toggleSearchCheckbox.checked = false;  // This will hide the search bar
+  }
+});
+
+</script>
+
+
+
+<!-- JS script to zoom images on click -->
+<script>
+  // Select all the featured product images
+  const productImages = document.querySelectorAll('.col-4 img');
+
+  productImages.forEach(img => {
+    img.addEventListener('click', () => {
+      // Toggle the 'zoomed' class on click to zoom in/out
+      img.classList.toggle('zoomed');
+    });
+  });
+</script>
+
+<!-- Rating Logic Script -->
+<script>
+  document.querySelectorAll('.rating').forEach(rating => {
+    const stars = rating.querySelectorAll('label');
+
+    stars.forEach((star, idx) => {
+      // Highlight stars on hover
+      star.addEventListener('mouseenter', () => {
+        for (let i = 0; i <= idx; i++) {
+          stars[i].querySelector('i').style.color = 'gold';
+        }
+        for (let i = idx + 1; i < stars.length; i++) {
+          stars[i].querySelector('i').style.color = '#ccc';
+        }
+      });
+
+      // Reset on mouse leave unless clicked
+      rating.addEventListener('mouseleave', () => {
+        const checked = rating.querySelector('input:checked');
+        stars.forEach((s, i) => {
+          s.querySelector('i').style.color =
+            checked && i < +checked.value ? 'gold' : '#ccc';
+        });
+      });
+
+      // Highlight on click
+      star.querySelector('input').addEventListener('change', () => {
+        for (let i = 0; i < stars.length; i++) {
+          stars[i].querySelector('i').style.color =
+            i < +star.querySelector('input').value ? 'gold' : '#ccc';
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Footer -->
+<footer id="contact-us">
+  <div class="container">
+    <!-- Contact Us -->
+    <div class="contact-us">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@craftycharms.com">info@craftycharms.com</a></p>
+      <p>Phone: <a href="tel:+8801234567890">+880 1234 567 890</a></p>
+      <p>Address: Dhanmondi, Dhaka, Bangladesh</p>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div>
+      <h3>Terms & Conditions</h3>
+      <p><a href="#">Privacy Policy</a></p>
+      <p><a href="#">Refund Policy</a></p>
+      <p><a href="#">Shipping Information</a></p>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="https://www.tiktok.com/@crafty_charm12?_t=ZS-8wDUrlzSgrw&_r=1" target="_blank" class="social-icon tiktok-icon">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </p>
+      <p>
+        <a href="https://www.facebook.com/profile.php?id=61568217347589&rdid=ZZKUvNcbYsuMbrTl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16F6ex67DV%2F#" target="_blank" class="social-icon fb-icon">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+      </p>
+      <p>
+        <a href="https://api.whatsapp.com/send?phone=%2B8801314734369&context=Afex0lNt9LFHgM5TYyar-3KZwAhhFo3L3xru0JqPq6GrJRciAPNa-M8ghRzR6W8_jl5Il7zNG7hD2D3lGfIsPC_Ny8gd0iDIhP4xC9gwUL7AkR4HjCgEPLIfFS3ATFzK8If_3FG8fDeiP2VLjUDXnItPQg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawKLF5JleHRuA2FlbQIxMABicmlkETFaM0JzbTkzMWp6TTFLOFNQAR6qhad4W_Ny8lrbXoGJuvq-F9UxAbiCY43HAkUa93OmoCKKKP5tzUhYWaU-dA_aem_AUCAzaEtqsfWH5hJe5GmJw" target="_blank" class="social-icon whatsapp-icon">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    &copy; 2025 Crafty Charms. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
